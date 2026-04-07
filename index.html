@@ -228,7 +228,7 @@
       flex: 0 0 60%;
       max-width: 60%;
       display: grid;
-      grid-template-columns: 1fr 1.35fr 1fr;
+      grid-template-columns: 1.28fr 0.95fr 1.28fr;
       gap: 14px;
       align-items: center;
     }
@@ -249,6 +249,19 @@
       filter: saturate(1.02) contrast(1.02);
     }
 
+    .trio-card.side-card img {
+      transform: scale(1.06);
+      transform-origin: center center;
+    }
+
+    .trio-card.middle-card img {
+      transform: scale(0.92);
+      transform-origin: center center;
+      mix-blend-mode: screen;
+      opacity: 0.9;
+      filter: saturate(0.96) contrast(1.06) brightness(0.96);
+    }
+
     .trio-card::after {
       content: "";
       position: absolute;
@@ -257,6 +270,12 @@
       background:
         radial-gradient(circle at center, rgba(3, 19, 46, 0) 64%, rgba(3, 19, 46, 0.28) 100%),
         linear-gradient(180deg, rgba(3, 19, 46, 0.06), rgba(3, 19, 46, 0.08));
+    }
+
+    .trio-card.middle-card::after {
+      background:
+        radial-gradient(circle at center, rgba(3, 19, 46, 0) 42%, rgba(3, 19, 46, 0.52) 100%),
+        linear-gradient(180deg, rgba(3, 19, 46, 0.22), rgba(3, 19, 46, 0.3));
     }
 
     .flow-graphic {
@@ -761,9 +780,9 @@
 
     <section class="mid-visual">
       <div class="trio-strip">
-        <div class="trio-card"><img src="panel-left.png" alt="Grizzly integration panel"></div>
-        <div class="trio-card"><img src="panel-middle.png" alt="Transformation arrow panel"></div>
-        <div class="trio-card"><img src="panel-right.png" alt="Netty integration panel"></div>
+        <div class="trio-card side-card"><img src="panel-left.png" alt="Grizzly integration panel"></div>
+        <div class="trio-card middle-card"><img src="panel-middle.png" alt="Transformation arrow panel"></div>
+        <div class="trio-card side-card"><img src="panel-right.png" alt="Netty integration panel"></div>
       </div>
       <aside class="insights-box">
         <div class="insights-grid">
