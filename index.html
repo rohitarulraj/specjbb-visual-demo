@@ -307,11 +307,12 @@
       padding: 24px 38px 24px 24px;
       color: #dce9ff;
       font-weight: 700;
-      font-size: clamp(9px, 0.66vw, 11px);
-      background: linear-gradient(90deg, #010204 0%, #030812 38%, #061a46 72%, #0f327a 100%);
+      font-size: clamp(8px, 0.58vw, 10px);
+      background: linear-gradient(90deg, rgba(1, 2, 4, 0) 0%, #02060f 26%, #061a46 72%, #0f327a 100%);
       clip-path: polygon(0 20%, 73% 20%, 73% 4%, 100% 50%, 73% 96%, 73% 80%, 0 80%);
       border-radius: 6px;
       border: 1px solid rgba(26, 61, 140, 0.75);
+      border-left-color: transparent;
       box-shadow:
         0 10px 18px rgba(0, 0, 0, 0.4),
         inset 0 1px 0 rgba(120, 160, 245, 0.28),
@@ -345,15 +346,15 @@
       align-items: center;
       gap: 10px;
       color: #eef5ff;
+      transform: translateX(-18px);
     }
 
     .flow-layout .side {
-      font-size: clamp(10px, 0.88vw, 15px);
+      font-size: clamp(9px, 0.78vw, 13px);
       line-height: 1.05;
       font-weight: 700;
       text-align: center;
       text-shadow: 0 2px 3px rgba(19, 52, 120, 0.45);
-      white-space: nowrap;
     }
 
     .flow-layout .mid-arrow {
