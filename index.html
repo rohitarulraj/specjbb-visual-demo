@@ -233,6 +233,24 @@
       align-items: center;
     }
 
+    .single-flow {
+      flex: 0 0 60%;
+      max-width: 60%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .single-flow img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+      mix-blend-mode: normal;
+      opacity: 0.98;
+      filter: saturate(1.02) contrast(1.02);
+    }
+
     .trio-card {
       position: relative;
       border-radius: 14px;
@@ -729,6 +747,12 @@
         grid-template-columns: 1fr;
       }
 
+      .single-flow {
+        flex: 1 1 auto;
+        max-width: none;
+        width: 100%;
+      }
+
       .flow-graphic {
         flex: 1 1 auto;
         max-width: none;
@@ -782,10 +806,8 @@
     </section>
 
     <section class="mid-visual">
-      <div class="trio-strip">
-        <div class="trio-card side-card"><img src="panel-left.png" alt="Grizzly integration panel"></div>
-        <div class="trio-card middle-card"><img src="panel-middle.png" alt="Transformation arrow panel"></div>
-        <div class="trio-card side-card"><img src="panel-right.png" alt="Netty integration panel"></div>
+      <div class="single-flow">
+        <img src="flow-combined.png" alt="Combined Grizzly to Netty flow panel">
       </div>
       <aside class="insights-box">
         <div class="insights-grid">
