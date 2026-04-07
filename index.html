@@ -217,11 +217,43 @@
     .mid-visual {
       margin-top: 10px;
       display: flex;
-      justify-content: flex-start;
-      align-items: stretch;
-      gap: 22px;
+      justify-content: center;
+      align-items: center;
       width: 100%;
       min-height: 320px;
+    }
+
+    .trio-strip {
+      width: min(1180px, 98%);
+      display: grid;
+      grid-template-columns: 1fr 1.35fr 1fr;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .trio-card {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .trio-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      mix-blend-mode: screen;
+      opacity: 0.98;
+      filter: saturate(1.04) contrast(1.03);
+    }
+
+    .trio-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at center, rgba(3, 19, 46, 0) 54%, rgba(3, 19, 46, 0.7) 100%),
+        linear-gradient(180deg, rgba(3, 19, 46, 0.14), rgba(3, 19, 46, 0.2));
     }
 
     .flow-graphic {
@@ -665,6 +697,10 @@
         flex-direction: column;
       }
 
+      .trio-strip {
+        grid-template-columns: 1fr;
+      }
+
       .flow-graphic {
         flex: 1 1 auto;
         max-width: none;
@@ -718,17 +754,11 @@
     </section>
 
     <section class="mid-visual">
-      <aside class="insights-box">
-        <div class="insights-grid">
-          <div class="insight-card"><span class="dot">01</span><span class="text">AI rapidly understood existing Grizzly NIO patterns and translated them to Netty equivalents</span></div>
-          <div class="insight-card"><span class="dot">02</span><span class="text">Complete Netty NIO framework integration delivered as an alternative to Grizzly</span></div>
-          <div class="insight-card"><span class="dot">03</span><span class="text">Generated robust error handling and resource cleanup code paths</span></div>
-          <div class="insight-card"><span class="dot">04</span><span class="text">AI delivered: 9 new Java files (~855 lines) + 2 configuration changes</span></div>
-          <div class="insight-card"><span class="dot">05</span><span class="text">Zero changes to SPECjbb2015 core logic - clean, SPI based integration</span></div>
-          <div class="insight-card"><span class="dot">06</span><span class="text">Production ready: validated in MultiJVM and Composite modes</span></div>
-          <div class="insight-card"><span class="dot">07</span><span class="text">Production quality: tests, documentation, configuration, and clean commits</span></div>
-        </div>
-      </aside>
+      <div class="trio-strip">
+        <div class="trio-card"><img src="panel-left.png" alt="Grizzly integration panel"></div>
+        <div class="trio-card"><img src="panel-middle.png" alt="Transformation arrow panel"></div>
+        <div class="trio-card"><img src="panel-right.png" alt="Netty integration panel"></div>
+      </div>
     </section>
 
     <section class="foot-headings">
