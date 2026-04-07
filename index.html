@@ -337,6 +337,33 @@
       text-shadow: 0 2px 3px rgba(19, 52, 120, 0.45);
     }
 
+    .flow-layout {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 10px;
+      color: #eef5ff;
+    }
+
+    .flow-layout .side {
+      font-size: clamp(12px, 1.05vw, 19px);
+      line-height: 1.05;
+      font-weight: 700;
+      text-align: center;
+      text-shadow: 0 2px 3px rgba(19, 52, 120, 0.45);
+      white-space: nowrap;
+    }
+
+    .flow-layout .mid-arrow {
+      font-size: clamp(48px, 3.3vw, 76px);
+      line-height: 0.8;
+      color: #18c2ff;
+      text-shadow: 0 0 10px rgba(24, 194, 255, 0.5);
+      transform: translateY(-3px);
+    }
+
     .flow-center .caption {
       text-align: center;
       font-size: clamp(11px, 0.86vw, 15px);
@@ -698,7 +725,11 @@
         <article class="flow-center">
           <div class="title">Claude Code</div>
           <div class="flow-pipeline">
-            <div class="flow-text">Grizzly Selector / Thread Model<br>to Netty EventLoop / Channel Pipeline</div>
+            <div class="flow-layout">
+              <div class="side">Grizzly<br>Selector<br>/ Thread Model</div>
+              <div class="mid-arrow">›</div>
+              <div class="side">Netty<br>EventLoop/<br>Channel Pipeline</div>
+            </div>
           </div>
           <div class="caption">9 new Java files (~855 LOC)<br>config in minutes</div>
         </article>
