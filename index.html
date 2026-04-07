@@ -676,13 +676,7 @@
     }
 
     .metric::before {
-      content: "";
-      position: absolute;
-      inset: 0 auto auto 0;
-      width: 100%;
-      height: 2px;
-      border-radius: 10px 10px 0 0;
-      background: linear-gradient(90deg, rgba(102, 228, 255, 0.75), rgba(38, 155, 255, 0.12));
+      display: none;
     }
 
     .metric::after {
@@ -711,6 +705,10 @@
       margin-bottom: 0;
       font-weight: 800;
       color: #f6fbff;
+    }
+
+    .metrics .metric:nth-child(4) strong {
+      font-size: clamp(21px, 1.95vw, 39px);
     }
 
     .metric .label {
