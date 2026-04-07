@@ -217,14 +217,16 @@
     .mid-visual {
       margin-top: 10px;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      justify-content: flex-start;
+      align-items: stretch;
+      gap: 18px;
       width: 100%;
       min-height: 320px;
     }
 
     .trio-strip {
-      width: min(1180px, 98%);
+      flex: 0 0 60%;
+      max-width: 60%;
       display: grid;
       grid-template-columns: 1fr 1.35fr 1fr;
       gap: 14px;
@@ -235,6 +237,7 @@
       position: relative;
       border-radius: 14px;
       overflow: hidden;
+      border: 1px solid rgba(102, 201, 255, 0.2);
     }
 
     .trio-card img {
@@ -698,6 +701,9 @@
       }
 
       .trio-strip {
+        flex: 1 1 auto;
+        max-width: none;
+        width: 100%;
         grid-template-columns: 1fr;
       }
 
@@ -755,10 +761,21 @@
 
     <section class="mid-visual">
       <div class="trio-strip">
-        <div class="trio-card"><img src="assets/panel-left.png" alt="Grizzly integration panel"></div>
-        <div class="trio-card"><img src="assets/panel-middle.png" alt="Transformation arrow panel"></div>
-        <div class="trio-card"><img src="assets/panel-right.png" alt="Netty integration panel"></div>
+        <div class="trio-card"><img src="panel-left.png" alt="Grizzly integration panel"></div>
+        <div class="trio-card"><img src="panel-middle.png" alt="Transformation arrow panel"></div>
+        <div class="trio-card"><img src="panel-right.png" alt="Netty integration panel"></div>
       </div>
+      <aside class="insights-box">
+        <div class="insights-grid">
+          <div class="insight-card"><span class="dot">01</span><span class="text">AI rapidly understood existing Grizzly NIO patterns and translated them to Netty equivalents</span></div>
+          <div class="insight-card"><span class="dot">02</span><span class="text">Complete Netty NIO framework integration delivered as an alternative to Grizzly</span></div>
+          <div class="insight-card"><span class="dot">03</span><span class="text">Generated robust error handling and resource cleanup code paths</span></div>
+          <div class="insight-card"><span class="dot">04</span><span class="text">AI delivered: 9 new Java files (~855 lines) + 2 configuration changes</span></div>
+          <div class="insight-card"><span class="dot">05</span><span class="text">Zero changes to SPECjbb2015 core logic - clean, SPI based integration</span></div>
+          <div class="insight-card"><span class="dot">06</span><span class="text">Production ready: validated in MultiJVM and Composite modes</span></div>
+          <div class="insight-card"><span class="dot">07</span><span class="text">Production quality: tests, documentation, configuration, and clean commits</span></div>
+        </div>
+      </aside>
     </section>
 
     <section class="foot-headings">
